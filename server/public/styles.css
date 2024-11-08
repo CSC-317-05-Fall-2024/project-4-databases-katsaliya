@@ -1,0 +1,238 @@
+/* Add your css here */
+*{
+    cursor: pointer;
+    margin:0;
+    padding: 0;
+  }
+  
+  body{
+    background-color: rgba(254, 241, 167, 0.955);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+    padding: 0;
+    min-height: 100vh;
+  
+  }
+  
+  .banner{
+    position: relative;
+    width: 100vw;
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  .banner img{ 
+    object-fit:cover;
+    width: 100%;
+    height: 275px;
+    opacity: 0.8; 
+  }
+  
+  .banner p{
+    color: white;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  nav { 
+    background-color: rgb(114, 19, 114);
+    width: 100%;
+  }
+  nav ul {
+  
+    list-style-type: none;
+    margin: 5px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; 
+  }
+  
+  nav li {
+    margin: 0;
+  }
+  
+  nav li a {
+    color: rgba(254, 241, 167, 0.955);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    flex-grow: 1; 
+    min-width: 100px; 
+    max-width: 200px; 
+  }
+  
+  .about {
+    text-align: center; 
+      padding: 20px; 
+      margin: 20px; 
+      border-radius: 8px; 
+  }
+  
+  .about img{
+    width: 500px;
+    height: 300px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
+  .about p{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(114, 19, 114);
+    text-align: center;
+    margin-top: auto;
+  }
+  
+  .footer p{
+    color:rgba(254, 241, 167, 0.955);
+  }
+  
+  
+  .attractions-flex{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .attractions{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 90vh;
+    height: auto;
+  }
+  
+  .place-image img{
+    width: 300px; 
+    height: 150px; 
+    border-radius: 5px;
+  }
+  
+  .place-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .place-text a{
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(114, 19, 114);
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+  
+  .place-text p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(114, 19, 114);
+    font-size: 15px;
+  }
+  
+  .restaurant-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    padding: 20px;
+  
+  }
+  .restaurant{
+    background-color: rgba(247, 235, 164, 0.676);
+    display: grid; 
+    grid-template-rows: auto auto auto; 
+    justify-items: center; 
+    align-items: center; 
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+  }
+  
+  .restaurant img {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 5px;
+  }
+  
+  .restaurant h4{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(114, 19, 114);
+  }
+  
+  .restaurant p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(114, 19, 114);
+    font-size: 10px;
+  }  
+
+  .new-restaurant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+ .new-restaurant form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new-restaurant .title p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(114, 19, 114);
+    font-size: 25px;
+    padding: 20px;
+    font-weight: bold;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(114, 19, 114);
+    font-size: 15px;
+    border-radius: 35rem;
+    max-width: 500px; gap: 5px;
+    width: auto;
+    padding: 0.7 em
+  }
+
+  .input-group .box {
+    width: 500px;
+    height: 20px;
+}
+
+.submit {
+  display: flex;
+  justify-content: column;
+  align-items: center;
+}

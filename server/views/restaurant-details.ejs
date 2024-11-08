@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/icon.png"> 
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/scripts/header.js" defer></script>
+    <script src="/scripts/restaurantCards.js" defer></script>
+
+</head>
+
+<body>
+    <header class = "banner"></header>
+    <nav class="nav"></nav>
+
+        <div class="restaurant-details">
+            <img class="restaurant-details-img" src="<%= restaurant.photo %>">
+            <div>
+                <h1><%= restaurant.name %></h1>
+                <h2><%= restaurant.address %></h2>
+                <h2><%= restaurant.phone %></h2>
+            </div>
+        </div>
+
+
+    <footer class="footer"></footer>
+</body>
+
+</html>

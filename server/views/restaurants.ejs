@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= Title %></title> <!-- convert title to dynamic template-->
+    <link rel="icon" type="image/png" href="images/icon.png"> 
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/scripts/header.js" defer></script>
+    <script src="/scripts/restaurantCards.js" defer></script>
+    
+</head>
+
+<body>
+    <header class = "banner"></header>
+    <nav class="nav"></nav>
+ 
+    <main>
+
+        <div class="restaurant-grid">
+            <% restaurants.forEach(function(restaurant, index) {  // loop through EACH 'restaurant' %> 
+            
+                <div class ="restaurant" data-id="<%= restaurant.id %>">
+                    <img src= "<%= restaurant.photo %>"> 
+                    <h4><%= restaurant.name %></h4>
+                    <p><%= restaurant.address %> </p>
+                    <p><%= restaurant.phone %> </p>
+                    <button class = "delete" data-id="<%= restaurant.id %>">X</button>
+                </div>
+                <% }); %>
+        </div>
+
+    </main>
+
+    <footer class="footer"></footer>
+    
+</body>
+
+</html>
