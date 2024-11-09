@@ -14,7 +14,7 @@ const getRestaurants = async () => {
 const getRestaurant = async (id) => {
     try{
         const results = await pool.query('SELECT * FROM restaurants WHERE id=$1', [id])
-        return results.row[0];
+        return results.rows[0];
     } catch (error) {
         console.error(error.message);
     }
@@ -43,7 +43,7 @@ const deleteRestaurant = async (id) => {
 
 const getReviewsForRestaurant = async (id) => {
     try { 
-        const results = await pool.query('SELECT * FROM restaurants WHERE restaurant_id = $1', [restaurant_id])
+        const results = await pool.query('SELECT * FROM reviews WHERE restaurant_id = $1', [id])
         console.log(results);
         return results.rows;
     } catch (error) {

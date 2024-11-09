@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/icon.png"> 
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/restaurant-details-styles.css">
     <script src="/scripts/header.js" defer></script>
     <script src="/scripts/restaurantCards.js" defer></script>
-
 </head>
 
 <body>
@@ -18,10 +18,19 @@
 
         <div class="restaurant-details">
             <img class="restaurant-details-img" src="<%= restaurant.photo %>">
-            <div>
+            <div class="restaurant-info">
                 <h1><%= restaurant.name %></h1>
                 <h2><%= restaurant.address %></h2>
                 <h2><%= restaurant.phone %></h2>
+                
+                <div> Reviews:
+                    <% for (let review of reviews) { %>
+                        <div>
+                            <strong>Rating:</strong> <%= review.rating %>/5 <br>
+                            <p><%= review.content %></p>
+                        </div>
+                    <% } %>
+                </div>
             </div>
         </div>
 
@@ -30,3 +39,4 @@
 </body>
 
 </html>
+

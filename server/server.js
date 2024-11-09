@@ -3,7 +3,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { backendRouter } from './routes/api.js';
-import { getRestaurants, getRestaurant, createRestaurant, deleteRestaurant } from './data/restaurants.js';
+import { getRestaurants, getRestaurant, createRestaurant, deleteRestaurant, getReviewsForRestaurant } from './data/restaurants.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -43,9 +43,14 @@ app.get('/restaurants', async (req, res) => {
 // get restaurants by id
 app.get('/restaurant/:id', async (req, res) => {
     const restaurantId = parseInt(req.params.id, 10);
-    const restaurant = await getRestaurant(restaurantId)
+    const restaurant = await getRestaurant(restaurantId);
+    console.log(restaurant);
     if(restaurant) {
-        res.render('restaurant-details', {restaurant})
+        const reviews = await getReviewsForRestaurant(restaurantId);
+        res.render('restaurant-details', {
+            restaurant,
+            reviews
+        });
     } else {
         res.status(404).send('Restaurant not found');
     }
